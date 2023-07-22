@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.poem-author {
+
+}
+
+.poem-title {
+  font-style: italic;
+}
+
+.poem-lines {}
