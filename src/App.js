@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import "./App.css"
 
 function App() {
     const [authors, setAuthors] = useState([])
@@ -43,13 +44,14 @@ function App() {
                 : (poems.author ?
                     <div className="App">
                         <h2>{poems.author}</h2>
-                        <h2>{poems.title}</h2>
+                        <h2 className="poem-title">{poems.title}</h2>
                         <br/>
-                        <h4>{poems.lines}</h4>
+                        <h4>{poems.lines.map(line => (<h4>{line}</h4>))}</h4>
                         <button onClick={getRandomPoem}>Get random poem</button>
                     </div>
                     : <div className="App">
                         <button onClick={getRandomPoem}>Get random poem</button>
+
                     </div>)
             }
         </>
